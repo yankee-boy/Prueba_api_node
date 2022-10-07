@@ -1,0 +1,39 @@
+//USURIOS CRUD API
+@api = http://localhost:9000/usuarios
+
+//Listar usuarios
+GET {{api}}
+
+###
+//Crear usuarios
+POST {{api}}
+Content-Type: application/json
+
+{
+    "usuario": "diegoDboy",
+    "nombre": "Diegmomon",
+    "clave":"Soy el one piece"
+}
+
+###
+// Consultar por id
+GET {{api}}/1
+
+###
+//Delete usuarios por id
+DELETE {{api}}/3
+
+###
+//GET total de usuarios
+GET {{api}}/count
+
+###
+//Update a usuarios
+PUT {{api}}/2
+Content-Type: application/json
+
+{
+    "usuario": "El pichula",
+    "nombre": "picoro daimaku",
+    "clave":"Makanko sapo"
+}
